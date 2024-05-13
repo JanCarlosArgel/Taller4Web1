@@ -90,6 +90,13 @@ function crearMain() {
     destinationsSection.style.cssText = 'display: flex; justify-content: space-around; margin-top: 0;';
     main.appendChild(destinationsSection);
 
+    const images = {
+        italy: './RECURSOS/ITALY.jpg',
+        france: './RECURSOS/FRANCE.jpg',
+        germany: './RECURSOS/GERMANY.jpg',
+        spain: './RECURSOS/SPAIN.jpg'
+    };
+
     ['ITALY', 'FRANCE', 'GERMANY', 'SPAIN'].forEach(country => {
         const destination = document.createElement('div');
         destination.className = 'destination';
@@ -103,8 +110,8 @@ function crearMain() {
         countryH3.style.cssText = 'background-color: #4caf50; color: white; padding: 10px 0;';
     
         const countryImg = document.createElement('img');
-countryImg.src = `./RECURSOS/${country.toLowerCase()}.jpg`;
-countryImg.alt = country;
+        countryImg.src = images[country.toLowerCase()];
+        countryImg.alt = country;
 
 countryImg.style.cssText = 'width: 275px; height: 190px; object-fit: cover;';
 
